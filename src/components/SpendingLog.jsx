@@ -27,16 +27,15 @@ export default function SpendingLog({entries, categories, onAdd, onDelete}) {
 
     return (
         <Card title="What did I spend on?">
-            <form onSubmit={handleSubmit} className="flex flexcol gap-2 sm:flex-row">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
                 <input
                     type = "text"
                     value = {description}
                     onChange={(e) => setDescription(e.target.value)}
                     placeholder ="e.g Coffee with friends"
-                    className = "flex-1 rpunded-lg border border-slate-300 px-3 py-2"
+                    className = "flex-1 rounded-lg border border-slate-300 px-3 py-2"
                 />
                 <input
-                    input
                     type="number"
                     min="0"
                     step="0.01"
@@ -85,7 +84,7 @@ export default function SpendingLog({entries, categories, onAdd, onDelete}) {
                 </ul>
             )}
 
-            <p className="mt-4 text-right font-sembold text-slate-700">
+            <p className="mt-4 text-right font-semibold text-slate-700">
                Total spent: {formatMoney(totalSpent)}
             </p>
         </Card>

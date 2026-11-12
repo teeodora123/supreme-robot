@@ -36,7 +36,7 @@ export default function Summary({salary, categories, totalExpenses, surplus, sav
                 />
             </div>
 
-            <div className='mt-4 rounded-lg p-3 text-center font-semibold ${getRateColor(savingRate)}'>
+            <div className={`mt-4 rounded-lg p-3 text-center font-semibold ${getRateColor(savingsRate)}`}>
                 Savings rate: {savingsRate.toFixed(1)}%
                 {savingsRate < 20 && <p className="text-xs font-normal"> Aim for at least 20%</p>}
             </div>
@@ -45,14 +45,14 @@ export default function Summary({salary, categories, totalExpenses, surplus, sav
 
             <div className="flex h-4 overflow-hidden rounded-full bg-slate-200">
                 {breakdown.map((c) => (
-                    <div key={c.id} className={c.color} style={{width: '${c.percent}%'}}/>
+                    <div key={c.id} className={c.color} style={{width: `${c.percent}%`}}/>
                 ))}
             </div>
 
             <ul className="mt-3 space-y-1 text-sm">
                 {breakdown.map((c) => (
                     <li key={c.id} className="flex justify-between">
-                        <span className="flex items-ceter gap-2">
+                        <span className="flex items-center gap-2">
                             <span className={`h-2 w-2 rounded-full ${c.color}`}/>
                             {c.name}
                             </span>

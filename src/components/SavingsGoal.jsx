@@ -24,8 +24,8 @@ export default function SavingsGoal({goal, onChange, monthlySavings}) {
     }else if(monthsNeeded === null) {
         message = 'Put an amount in savings category to see how long it will take'
     }else {
-        message = 'You still need ${formatMoney(remaining)}. Saving ${formatMoney(monthlySavings)}/month,\n' +
-            ' you\'ll get there in ${monthsNeeded} month(s), around ${getFinishDate(monthsNeeded)}'
+        message = `You still need ${formatMoney(remaining)}. Saving ${formatMoney(monthlySavings)}/month,\n` +
+            ` you\'ll get there in ${monthsNeeded} month(s), around ${getFinishDate(monthsNeeded)}`
     }
 
     return (
@@ -38,7 +38,7 @@ export default function SavingsGoal({goal, onChange, monthlySavings}) {
                         min="0"
                         value={goal.target || ''}
                         onChange={(e) => handleChange('target', e.target.value)}
-                        className= "rounded-lg border border-s;late-300 px-3 py-2"/>
+                        className= "rounded-lg border border-slate-300 px-3 py-2"/>
                 </label>
                 <label className="flex flex-col gap-1 text-sm text-slate-600">
                     Already saved
@@ -47,7 +47,7 @@ export default function SavingsGoal({goal, onChange, monthlySavings}) {
                         min="0"
                         value={goal.alreadySaved || ''}
                         onChange={(e) => handleChange('alreadySaved', e.target.value)}
-                        className= "rounded-lg border border-s;late-300 px-3 py-2"/>
+                        className= "rounded-lg border border-slate-300 px-3 py-2"/>
                 </label>
             </div>
 
