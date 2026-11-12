@@ -3,7 +3,7 @@ import Card from './Card'
 import {formatMoney} from '../utils/format'
 
 export default function SpendingLog({entries, categories, onAdd, onDelete}) {
-    const [description, setDescription] = useState('')
+    const[description, setDescription] = useState('')
     const[amount, setAmount] = useState('')
     const[categoryId, setCategoryId] = useState(categories[0].id)
 
