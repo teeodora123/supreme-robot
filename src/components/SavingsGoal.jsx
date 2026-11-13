@@ -25,7 +25,7 @@ export default function SavingsGoal({goal, onChange, monthlySavings}) {
         message = 'Put an amount in savings category to see how long it will take'
     }else {
         message = `You still need ${formatMoney(remaining)}. Saving ${formatMoney(monthlySavings)}/month,\n` +
-            ` you\'ll get there in ${monthsNeeded} month(s), around ${getFinishDate(monthsNeeded)}`
+            ` you'll get there in ${monthsNeeded} month(s), around ${getFinishDate(monthsNeeded)}`
     }
 
     return (

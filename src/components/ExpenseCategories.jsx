@@ -5,7 +5,7 @@ export default function ExpenseCategories({categories, onChange}) {
         <Card title="Monthly budget">
             <div className="space-y-3">
                 {categories.map((category)=> (
-                    <label key={category.id} className="flex-items-center justify-between gap-4">
+                    <label key={category.id} className="flex items-center justify-between gap-4">
                         <span className="flex items-center gap-2 text-slate-600">
                             <span className={`h-3 w-3 rounded-full ${category.color}`}/>
                             {category.name}

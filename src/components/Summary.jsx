@@ -28,7 +28,7 @@ export default function Summary({salary, categories, totalExpenses, surplus, sav
         <Card title="Overview">
             <div className="space-y-2">
                 <Row label="Salary" value={formatMoney(salary)}/>
-                <Row label="total planned" value={formatMoney(totalExpenses)}/>
+                <Row label="Total Planned" value={formatMoney(totalExpenses)}/>
                 <Row
                     label="Remaining"
                     value={formatMoney(surplus)}
